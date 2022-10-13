@@ -1,3 +1,5 @@
+import 'package:cs378_project_1/option_info.dart';
+import 'package:cs378_project_1/route_option.dart';
 import 'package:cs378_project_1/routes_places.dart';
 import 'package:cs378_project_1/routes_events.dart';
 import 'package:cs378_project_1/routes_sports.dart';
@@ -12,7 +14,7 @@ class AppColors {
   static const MaterialColor primary = Colors.amber;
   static const MaterialColor secondary = Colors.green;
   static const MaterialColor tertiary = Colors.cyan;
-  static const MaterialColor quadrinary = Colors.purple;
+  static const MaterialColor quaternary = Colors.purple;
 }
 
 class MyApp extends StatelessWidget {
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'CS378 Project 1',
       theme: ThemeData(
         primarySwatch: AppColors.primary,
         brightness: Brightness.dark,
@@ -35,6 +37,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
+
   final String title;
 
   @override
@@ -78,10 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
             bottom: PreferredSize(
                 preferredSize: homePageTabs.preferredSize,
                 child: ColoredBox(
-                  color: Color.fromARGB(173, 0, 0, 0),
+                  color: const Color.fromARGB(173, 0, 0, 0),
                   child: homePageTabs,
                 )),
-            //FIXME: Label color not very visible. Also change indicator color
+            //TODO: Change indicator Width & shape
           ),
           body: TabBarView(children: [
             Column(
@@ -92,20 +95,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   runSpacing: 10,
                   children: [
                     //Cicero - Al Capone's Home
-                    rowPiece(
-                        displayText: "Cicero",
-                        imageName: "place_capone.jpg",
-                        swatch: AppColors.secondary),
+                    rowPiece(context, info: getInfo("place_capone.jpg")),
                     //Kenwood - Obama's Home
-                    rowPiece(
-                        displayText: "Kenwood",
-                        imageName: "place_obama.jpg",
-                        swatch: AppColors.secondary),
+                    rowPiece(context, info: getInfo("place_obama.jpg")),
                     //Hermosa - Walt Disney's Home
-                    rowPiece(
-                        displayText: "Hermosa",
-                        imageName: "place_disney.jpg",
-                        swatch: AppColors.secondary),
+                    rowPiece(context, info: getInfo("place_disney.jpg")),
                   ],
                 )
               ],
@@ -121,20 +115,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   runSpacing: 10,
                   children: [
                     rowPiece(
-                        displayText: "Halsted Halloween Night Parade",
-                        imageName: "event_spooky.jpg",
-                        fontSize: 25,
-                        swatch: AppColors.tertiary),
+                      context,
+                      info: getInfo("event_spooky.jpg"),
+                      fontSize: 25,
+                    ),
                     rowPiece(
-                        displayText: "A Century of Black Writers on Justice",
-                        imageName: "event_justice.jpg",
-                        fontSize: 25,
-                        swatch: AppColors.tertiary),
+                      context,
+                      info: getInfo("event_justice.jpg"),
+                      fontSize: 25,
+                    ),
                     rowPiece(
-                        displayText: "Chicago River Architecture Cruise",
-                        imageName: "event_cruise.jpg",
-                        fontSize: 25,
-                        swatch: AppColors.tertiary),
+                      context,
+                      info: getInfo("event_cruise.jpg"),
+                      fontSize: 25,
+                    ),
                   ],
                 )
               ],
@@ -146,18 +140,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 Wrap(
                   runSpacing: 10,
                   children: [
+                    rowPiece(context, info: getInfo("sport_bulls.png")),
                     rowPiece(
-                        displayText: "Bulls",
-                        imageName: "bulls.png",
-                        swatch: AppColors.quadrinary),
+                      context,
+                      info: getInfo("sport_sox.png"),
+                    ),
                     rowPiece(
-                        displayText: "White Sox",
-                        imageName: "sox.png",
-                        swatch: AppColors.quadrinary),
-                    rowPiece(
-                        displayText: "Fire",
-                        imageName: "fire.png",
-                        swatch: AppColors.quadrinary),
+                      context,
+                      info: getInfo("sport_fire.png"),
+                    ),
                   ],
                 )
               ],
@@ -168,33 +159,41 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 Widget rowPiece(
-    {required String displayText,
-    required String imageName,
-    double fontSize = 35,
-    Color swatch = AppColors.primary}) {
+  BuildContext ctx, {
+  required OptionInfo info,
+  double fontSize = 35,
+}) {
   return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        Container(
-          //TODO: Make image clicakable & not the text
-          //TODO: Hero into new screen with image larger
-          height: 150,
-          width: 150,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("images/$imageName"), fit: BoxFit.cover),
-              shape: BoxShape.circle,
-              border: Border.all(color: swatch, width: 5),
-              boxShadow: [BoxShadow(color: swatch, blurRadius: 10)]),
-        ),
+        GestureDetector(
+            child: Hero(
+              tag: info.imageTitle,
+              child: Container(
+                height: 150,
+                width: 150,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("images/${info.fileName}"),
+                        fit: BoxFit.cover),
+                    shape: BoxShape.circle,
+                    border: Border.all(color: info.swatch, width: 5),
+                    boxShadow: [BoxShadow(color: info.swatch, blurRadius: 10)]),
+              ),
+            ),
+            onTap: () => Navigator.push(ctx, MaterialPageRoute(builder: (ctx) {
+                  return RouteOption(
+                    oInfo: info,
+                  );
+                }))),
         SizedBox(
             width: 150,
             child: Text(
-              displayText,
+              info.imageTitle,
               style: TextStyle(
                   fontSize: fontSize,
-                  color: swatch,
-                  shadows: [Shadow(color: swatch, blurRadius: 10)]),
+                  color: info.swatch,
+                  shadows: [Shadow(color: info.swatch, blurRadius: 10)]),
             )),
       ]);
 }
@@ -221,3 +220,84 @@ TabBar get homePageTabs => TabBar(
       labelStyle: const TextStyle(fontSize: 15),
       // indicatorSize: ,
     );
+
+// getInfo - holds all the descriptions, file names, & titles for
+// each option. They are bundeled and returned as one object.
+OptionInfo getInfo(String fileName) {
+  switch (fileName) {
+    case "place_capone.jpg":
+      return OptionInfo(
+          imageTitle: "Cicero",
+          fileName: fileName,
+          imageDescription: "PLACEHOLDER_DESCRIPTION",
+          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          swatch: AppColors.secondary);
+    case "place_obama.jpg":
+      return OptionInfo(
+          imageTitle: "Kenwood",
+          fileName: fileName,
+          imageDescription: "PLACEHOLDER_DESCRIPTION",
+          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          swatch: AppColors.secondary);
+    case "place_disney.jpg":
+      return OptionInfo(
+          imageTitle: "Hermosa",
+          fileName: fileName,
+          imageDescription: "PLACEHOLDER_DESCRIPTION",
+          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          swatch: AppColors.secondary);
+    case "event_spooky.jpg":
+      return OptionInfo(
+          imageTitle: "Halsted Halloween Night Parade",
+          fileName: fileName,
+          imageDescription: "PLACEHOLDER_DESCRIPTION",
+          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          swatch: AppColors.tertiary);
+    case "event_justice.jpg":
+      return OptionInfo(
+          imageTitle: "A Century of Black Writers on Justice",
+          fileName: fileName,
+          imageDescription: "PLACEHOLDER_DESCRIPTION",
+          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          swatch: AppColors.tertiary);
+    case "event_cruise.jpg":
+      return OptionInfo(
+          imageTitle: "Chicago River Architecture Cruise",
+          fileName: fileName,
+          imageDescription: "PLACEHOLDER_DESCRIPTION",
+          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          swatch: AppColors.tertiary);
+    case "sport_bulls.png":
+      return OptionInfo(
+          imageTitle: "Bulls",
+          fileName: fileName,
+          imageDescription: "PLACEHOLDER_DESCRIPTION",
+          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          swatch: AppColors.quaternary);
+    case "sport_sox.png":
+      return OptionInfo(
+          imageTitle: "White Sox",
+          fileName: fileName,
+          imageDescription: "PLACEHOLDER_DESCRIPTION",
+          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          swatch: AppColors.quaternary);
+    case "sport_fire.png":
+      return OptionInfo(
+          imageTitle: "Fire",
+          fileName: fileName,
+          imageDescription: "PLACEHOLDER_DESCRIPTION",
+          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          swatch: AppColors.quaternary);
+    default:
+      throw Exception("Image '$fileName' does not exist.");
+  }
+}
