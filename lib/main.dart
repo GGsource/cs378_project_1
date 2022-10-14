@@ -89,11 +89,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   runSpacing: 10,
                   children: [
                     //Cicero - Al Capone's Home
-                    rowPiece(context, info: getInfo("place_capone.jpg")),
+                    rowPiece(context, info: getInfo("place_cicero.png")),
                     //Kenwood - Obama's Home
-                    rowPiece(context, info: getInfo("place_obama.jpg")),
+                    rowPiece(context, info: getInfo("place_kenwood.png")),
                     //Hermosa - Walt Disney's Home
-                    rowPiece(context, info: getInfo("place_disney.jpg")),
+                    rowPiece(context, info: getInfo("place_hermosa.png")),
                   ],
                 ),
               ],
@@ -222,30 +222,32 @@ TabBar get homePageTabs => TabBar(
 OptionInfo getInfo(String fileName) {
   switch (fileName) {
     // TODO: Fill out Descriptions
+    //TODO: Add addresses to neighborhood descriptions
     // TODO: Add Alt Image Files
     // TODO: Add Alt Image descriptions
-    case "place_capone.jpg":
+    case "place_cicero.png":
       return OptionInfo(
           imageTitle: "Cicero",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION",
-          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          imageDescription:
+              """Cicero is a suburb of Chicago and an incorporated town in Cook County, Illinois, United States. Per the 2020 census, the population was 85,268. making it the 11th largest municipality in Illinois. The town of Cicero is named after Marcus Tullius Cicero, a Roman statesman and orator.""",
+          altFileName: "place_capone.jpg",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
           swatch: AppColors.secondary);
-    case "place_obama.jpg":
+    case "place_kenwood.png":
       return OptionInfo(
           imageTitle: "Kenwood",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
-          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altFileName: "place_obama.jpg",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
           swatch: AppColors.secondary);
-    case "place_disney.jpg":
+    case "place_hermosa.png":
       return OptionInfo(
           imageTitle: "Hermosa",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
-          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altFileName: "place_disney.jpg",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
           swatch: AppColors.secondary);
     case "event_spooky.jpg":
@@ -253,7 +255,7 @@ OptionInfo getInfo(String fileName) {
           imageTitle: "Halsted Halloween Parade",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
-          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altFileName: "event_spooky_alt.png",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
           swatch: AppColors.tertiary);
     case "event_justice.jpg":
@@ -261,7 +263,7 @@ OptionInfo getInfo(String fileName) {
           imageTitle: "Black Writers on Justice",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
-          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altFileName: "event_justice_alt.png",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
           swatch: AppColors.tertiary);
     case "event_cruise.jpg":
@@ -269,7 +271,7 @@ OptionInfo getInfo(String fileName) {
           imageTitle: "Chicago River Cruise",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
-          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altFileName: "event_cruise_alt.png",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
           swatch: AppColors.tertiary);
     case "sport_bulls.png":
@@ -277,7 +279,7 @@ OptionInfo getInfo(String fileName) {
           imageTitle: "Bulls",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
-          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altFileName: "sport_bulls_alt.png",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
           swatch: AppColors.quaternary);
     case "sport_sox.png":
@@ -285,7 +287,7 @@ OptionInfo getInfo(String fileName) {
           imageTitle: "White Sox",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
-          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altFileName: "sport_sox_alt.png",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
           swatch: AppColors.quaternary);
     case "sport_fire.png":
@@ -293,7 +295,7 @@ OptionInfo getInfo(String fileName) {
           imageTitle: "Fire",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
-          altFileName: "PLACEHOLDER_ALT_FILE.PNG",
+          altFileName: "sport_fire_alt.png",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
           swatch: AppColors.quaternary);
     default:

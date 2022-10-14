@@ -70,7 +70,11 @@ class _RouteOption extends State<RouteOption> {
               widget.oInfo.imageTitle,
               style: getTitleStyle(),
             ),
-            Text(_currentDescription)
+            Text(
+              textAlign: TextAlign.center,
+              _currentDescription,
+              style: const TextStyle(fontSize: 20),
+            )
           ],
         ),
       ),
