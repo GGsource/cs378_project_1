@@ -1,4 +1,5 @@
 import 'package:cs378_project_1/option_info.dart';
+import 'package:cs378_project_1/title_style.dart';
 import 'package:flutter/material.dart';
 
 class RouteOption extends StatefulWidget {
@@ -40,15 +41,9 @@ class _RouteOption extends State<RouteOption> {
             Shadow(color: widget.oInfo.swatch.shade700, blurRadius: 30),
           ],
         ),
-        title: Text(
-          widget.oInfo.imageTitle,
-          style: const TextStyle(
-            color: Colors.white,
-            shadows: [
-              Shadow(color: Colors.black, offset: Offset(5, 5), blurRadius: 10)
-            ],
-          ),
-        ),
+        title:
+            Text(widget.oInfo.imageTitle, style: getTitleStyle(fontSize: 30)),
+        centerTitle: true,
         flexibleSpace: ClipRRect(
           borderRadius: BorderRadius.circular(100),
           child: Container(
@@ -71,7 +66,10 @@ class _RouteOption extends State<RouteOption> {
               ),
               onTap: () => Navigator.pop(context),
             ),
-            Text(widget.oInfo.imageTitle),
+            Text(
+              widget.oInfo.imageTitle,
+              style: getTitleStyle(),
+            ),
             Text(_currentDescription)
           ],
         ),

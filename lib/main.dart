@@ -1,5 +1,6 @@
 import 'package:cs378_project_1/option_info.dart';
 import 'package:cs378_project_1/route_option.dart';
+import 'package:cs378_project_1/title_style.dart';
 
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,7 @@ void main() {
   runApp(const MyApp());
 }
 
+//Consistent set of colors that the app will use
 class AppColors {
   static const MaterialColor primary = Colors.amber;
   static const MaterialColor secondary = Colors.green;
@@ -22,12 +24,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CS378 Project 1',
       theme: ThemeData(
-        primarySwatch: AppColors.primary,
-        brightness: Brightness.dark,
-        indicatorColor: AppColors.primary,
+        brightness: Brightness.dark, //Sets backgrounds to dark grey
+        primarySwatch: AppColors.primary, //Sets primary app color
+        indicatorColor: AppColors.primary, //Sets indicator color for tabs
       ),
-      home: const MyHomePage(title: 'Welcome to Chicago'),
-      debugShowCheckedModeBanner: false,
+      home: const MyHomePage(title: 'Welcome to Chicago'), //Appbar title
+      debugShowCheckedModeBanner: false, //Removes debug banner
     );
   }
 }
@@ -45,24 +47,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 3, //Number of tabs to display in appbar
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
-            widget.title,
-            style: const TextStyle(
-              color: Colors.white,
-              height: 3,
-              fontSize: 40,
-              shadows: [
-                Shadow(
-                    color: Colors.black, offset: Offset(5, 5), blurRadius: 10)
-              ],
-              // TODO: Use custom font for whole app
-            ),
-          ),
-          centerTitle: true,
+          title: Text(widget.title, style: getTitleStyle()),
+          centerTitle: true, //Centers the title horizontally
           flexibleSpace: ClipRRect(
+            //Wrap Appbar image in order to clip it round
             borderRadius: BorderRadius.circular(60),
             child: Container(
               decoration: const BoxDecoration(
@@ -114,15 +105,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   // Events
                   runSpacing: 10,
                   children: [
-                    //Halsted Halloween Night Parade
+                    //Halsted Halloween Parade
                     rowPiece(context,
-                        info: getInfo("event_spooky.jpg"), fontSize: 25),
+                        info: getInfo("event_spooky.jpg"), fontSize: 30),
                     //Black Writers on Justice
                     rowPiece(context,
-                        info: getInfo("event_justice.jpg"), fontSize: 25),
-                    //Chicago River Architecture Cruise
+                        info: getInfo("event_justice.jpg"), fontSize: 30),
+                    //Chicago Cruise
                     rowPiece(context,
-                        info: getInfo("event_cruise.jpg"), fontSize: 25),
+                        info: getInfo("event_cruise.jpg"), fontSize: 30),
                   ],
                 ),
               ],
@@ -154,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
 Widget rowPiece(
   BuildContext ctx, {
   required OptionInfo info,
-  double fontSize = 35,
+  double fontSize = 50,
 }) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -194,6 +185,7 @@ Widget rowPiece(
           info.imageTitle,
           style: TextStyle(
               fontSize: fontSize,
+              fontFamily: "QuickKiss",
               color: info.swatch,
               shadows: [Shadow(color: info.swatch, blurRadius: 10)]),
         ),
@@ -222,7 +214,7 @@ TabBar get homePageTabs => TabBar(
       labelColor: AppColors.primary,
       overlayColor: MaterialStateProperty.all(AppColors.primary),
       labelStyle: const TextStyle(fontSize: 15),
-      indicatorWeight: 10,
+      indicatorWeight: 5,
     );
 
 // getInfo - holds all the descriptions, file names, & titles for
@@ -258,7 +250,7 @@ OptionInfo getInfo(String fileName) {
           swatch: AppColors.secondary);
     case "event_spooky.jpg":
       return OptionInfo(
-          imageTitle: "Halsted Halloween Night Parade",
+          imageTitle: "Halsted Halloween Parade",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
           altFileName: "PLACEHOLDER_ALT_FILE.PNG",
@@ -274,7 +266,7 @@ OptionInfo getInfo(String fileName) {
           swatch: AppColors.tertiary);
     case "event_cruise.jpg":
       return OptionInfo(
-          imageTitle: "Chicago River Architecture Cruise",
+          imageTitle: "Chicago River Cruise",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
           altFileName: "PLACEHOLDER_ALT_FILE.PNG",
