@@ -4,8 +4,10 @@ class OptionInfo {
   String imageTitle;
   String fileName;
   String imageDescription;
+  String imageAddress;
   String altFileName;
   String altDescription;
+  String altImageAddress;
   bool isAltMode = false;
   MaterialColor swatch;
 
@@ -13,8 +15,10 @@ class OptionInfo {
       {required this.imageTitle,
       required this.fileName,
       required this.imageDescription,
+      required this.imageAddress,
       required this.altFileName,
       required this.altDescription,
+      required this.altImageAddress,
       required this.swatch});
 }
 
