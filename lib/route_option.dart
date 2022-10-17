@@ -1,6 +1,4 @@
 import 'package:cs378_project_1/option_info.dart';
-import 'package:cs378_project_1/title_style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RouteOption extends StatefulWidget {
@@ -15,6 +13,7 @@ class RouteOption extends StatefulWidget {
 class _RouteOption extends State<RouteOption> {
   late String _currentFileName = widget.oInfo.fileName;
   late String _currentDescription = widget.oInfo.imageDescription;
+  late String _currentAddress = widget.oInfo.imageAddress;
   IconData _currentIcon = Icons.toggle_off_outlined;
 
   void _toggleState() {
@@ -22,10 +21,12 @@ class _RouteOption extends State<RouteOption> {
       if (!widget.oInfo.isAltMode) {
         _currentFileName = widget.oInfo.altFileName;
         _currentDescription = widget.oInfo.altDescription;
+        _currentAddress = widget.oInfo.altImageAddress;
         _currentIcon = Icons.toggle_on_outlined;
       } else {
         _currentFileName = widget.oInfo.fileName;
         _currentDescription = widget.oInfo.imageDescription;
+        _currentAddress = widget.oInfo.imageAddress;
         _currentIcon = Icons.toggle_off_outlined;
       }
       widget.oInfo.isAltMode = !widget.oInfo.isAltMode;
@@ -90,9 +91,16 @@ class _RouteOption extends State<RouteOption> {
                       ),
                       // DESCRIPTION
                       Text(
-                        textAlign: TextAlign.center,
                         _currentDescription,
+                        textAlign: TextAlign.center,
                         style: const TextStyle(fontSize: 20),
+                      ),
+                      Text(
+                        _currentAddress,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontFamily: "QuickKiss",
+                            color: widget.oInfo.swatch),
                       ),
                     ],
                   ),

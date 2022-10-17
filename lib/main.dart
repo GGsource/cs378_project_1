@@ -1,6 +1,5 @@
 import 'package:cs378_project_1/option_info.dart';
 import 'package:cs378_project_1/route_option.dart';
-import 'package:cs378_project_1/title_style.dart';
 
 import 'package:flutter/material.dart';
 
@@ -231,73 +230,92 @@ OptionInfo getInfo(String fileName) {
           fileName: fileName,
           imageDescription:
               "Cicero is a suburb of Chicago and an incorporated town in Cook County, Illinois, United States. Per the 2020 census, the population was 85,268. making it the 11th largest municipality in Illinois. The town of Cicero is named after Marcus Tullius Cicero, a Roman statesman and orator.",
+          imageAddress: "PLACEHOLDER_ADDRESS",
           altFileName: "place_capone.jpg",
           altDescription:
-              "PLACEHOLDER_ALT_DESCRIPTION Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff ",
+              "Cicero also happens to be the place the infamous Al Capone called home. Al Capone was a known mobster who found his fame at the height of the 'Roaring Twenties', participating in everything from gambling and bootlegging all the way to racketeering and straight up murder. Pictured above is his residence during his life in Illinois, which by contrast seems quite calm and cozy, unlike the life he lead outside of it. ",
+          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
           swatch: AppColors.secondary);
     case "place_kenwood.png":
       return OptionInfo(
           imageTitle: "Kenwood",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION",
+          imageDescription:
+              "If any place screams weatlh, it has to be Kenwood. Settled in the 1850s by rich Chicagoans who wanted to escape the crowded city, Kenwood is populated by extravagant residences and neighborhoods tailored perfectly down to the last leaf on a tree. If there's any fair criticism of Kenwood, it's certainly not its beauty.",
+          imageAddress: "PLACEHOLDER_ADDRESS",
           altFileName: "place_obama.jpg",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
           swatch: AppColors.secondary);
     case "place_hermosa.png":
       return OptionInfo(
           imageTitle: "Hermosa",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
+          imageAddress: "PLACEHOLDER_ADDRESS",
           altFileName: "place_disney.jpg",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
           swatch: AppColors.secondary);
     case "event_spooky.jpg":
       return OptionInfo(
           imageTitle: "Halsted Halloween Parade",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
+          imageAddress: "PLACEHOLDER_ADDRESS",
           altFileName: "event_spooky_alt.png",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
           swatch: AppColors.tertiary);
     case "event_justice.jpg":
       return OptionInfo(
           imageTitle: "Black Writers on Justice",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
+          imageAddress: "PLACEHOLDER_ADDRESS",
           altFileName: "event_justice_alt.png",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
           swatch: AppColors.tertiary);
     case "event_cruise.jpg":
       return OptionInfo(
           imageTitle: "Chicago River Cruise",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
+          imageAddress: "PLACEHOLDER_ADDRESS",
           altFileName: "event_cruise_alt.png",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
           swatch: AppColors.tertiary);
     case "sport_bulls.png":
       return OptionInfo(
           imageTitle: "Bulls",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
+          imageAddress: "PLACEHOLDER_ADDRESS",
           altFileName: "sport_bulls_alt.png",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
           swatch: AppColors.quaternary);
     case "sport_sox.png":
       return OptionInfo(
           imageTitle: "White Sox",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
+          imageAddress: "PLACEHOLDER_ADDRESS",
           altFileName: "sport_sox_alt.png",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
           swatch: AppColors.quaternary);
     case "sport_fire.png":
       return OptionInfo(
           imageTitle: "Fire",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
+          imageAddress: "PLACEHOLDER_ADDRESS",
           altFileName: "sport_fire_alt.png",
           altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
           swatch: AppColors.quaternary);
     default:
       throw Exception("Image '$fileName' does not exist.");
