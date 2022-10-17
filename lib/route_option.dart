@@ -1,5 +1,6 @@
 import 'package:cs378_project_1/option_info.dart';
 import 'package:cs378_project_1/title_style.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RouteOption extends StatefulWidget {
@@ -55,27 +56,50 @@ class _RouteOption extends State<RouteOption> {
         ),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            GestureDetector(
-              child: Hero(
-                tag: widget.oInfo.imageTitle,
-                child: Image.asset("images/$_currentFileName"),
+      body: Container(
+        margin: const EdgeInsets.fromLTRB(0, 30, 0, 80),
+        child: RawScrollbar(
+          thumbColor: widget.oInfo.swatch,
+          trackVisibility: true,
+          trackColor: widget.oInfo.swatch.shade200.withOpacity(0.5),
+          thickness: 10,
+          radius: const Radius.circular(100),
+          thumbVisibility: true,
+          child: SingleChildScrollView(
+            child: Container(
+              margin: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Wrap(
+                    alignment: WrapAlignment.center,
+                    spacing: 40,
+                    runSpacing: 0,
+                    children: [
+                      // IMAGE
+                      GestureDetector(
+                        child: Hero(
+                          tag: widget.oInfo.imageTitle,
+                          child: Image.asset("images/$_currentFileName"),
+                        ),
+                      ),
+                      // TITLE
+                      Text(
+                        widget.oInfo.imageTitle,
+                        style: getTitleStyle(),
+                      ),
+                      // DESCRIPTION
+                      Text(
+                        textAlign: TextAlign.center,
+                        _currentDescription,
+                        style: const TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              onTap: () => Navigator.pop(context),
             ),
-            Text(
-              widget.oInfo.imageTitle,
-              style: getTitleStyle(),
-            ),
-            Text(
-              textAlign: TextAlign.center,
-              _currentDescription,
-              style: const TextStyle(fontSize: 20),
-            )
-          ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(

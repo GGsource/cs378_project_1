@@ -222,7 +222,7 @@ TabBar get homePageTabs => TabBar(
 OptionInfo getInfo(String fileName) {
   switch (fileName) {
     // TODO: Fill out Descriptions
-    //TODO: Add addresses to neighborhood descriptions
+    //TODO: Add addresses to all descriptions
     // TODO: Add Alt Image Files
     // TODO: Add Alt Image descriptions
     case "place_cicero.png":
@@ -230,9 +230,10 @@ OptionInfo getInfo(String fileName) {
           imageTitle: "Cicero",
           fileName: fileName,
           imageDescription:
-              """Cicero is a suburb of Chicago and an incorporated town in Cook County, Illinois, United States. Per the 2020 census, the population was 85,268. making it the 11th largest municipality in Illinois. The town of Cicero is named after Marcus Tullius Cicero, a Roman statesman and orator.""",
+              "Cicero is a suburb of Chicago and an incorporated town in Cook County, Illinois, United States. Per the 2020 census, the population was 85,268. making it the 11th largest municipality in Illinois. The town of Cicero is named after Marcus Tullius Cicero, a Roman statesman and orator.",
           altFileName: "place_capone.jpg",
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
+          altDescription:
+              "PLACEHOLDER_ALT_DESCRIPTION Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff Lorem latin stuff ",
           swatch: AppColors.secondary);
     case "place_kenwood.png":
       return OptionInfo(
