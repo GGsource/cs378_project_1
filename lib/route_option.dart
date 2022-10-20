@@ -75,7 +75,7 @@ class _RouteOption extends State<RouteOption> {
                   Wrap(
                     alignment: WrapAlignment.center,
                     spacing: 40,
-                    runSpacing: 0,
+                    runSpacing: 20,
                     children: [
                       // IMAGE
                       GestureDetector(
@@ -87,6 +87,7 @@ class _RouteOption extends State<RouteOption> {
                       // TITLE
                       Text(
                         widget.oInfo.imageTitle,
+                        textAlign: TextAlign.center,
                         style: getTitleStyle(),
                       ),
                       // DESCRIPTION
@@ -98,9 +99,8 @@ class _RouteOption extends State<RouteOption> {
                       Text(
                         _currentAddress,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontFamily: "QuickKiss",
-                            color: widget.oInfo.swatch),
+                        style:
+                            TextStyle(fontSize: 25, color: widget.oInfo.swatch),
                       ),
                     ],
                   ),

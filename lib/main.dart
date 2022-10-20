@@ -220,35 +220,35 @@ TabBar get homePageTabs => TabBar(
 // each option. They are bundeled and returned as one object.
 OptionInfo getInfo(String fileName) {
   switch (fileName) {
-    // TODO: Fill out Descriptions
-    //TODO: Add addresses to all descriptions
-    // TODO: Add Alt Image Files
-    // TODO: Add Alt Image descriptions
     case "place_cicero.png":
       return OptionInfo(
+          //DONE: FIll in Cicero
           imageTitle: "Cicero",
           fileName: fileName,
           imageDescription:
               "Cicero is a suburb of Chicago and an incorporated town in Cook County, Illinois, United States. Per the 2020 census, the population was 85,268. making it the 11th largest municipality in Illinois. The town of Cicero is named after Marcus Tullius Cicero, a Roman statesman and orator.",
-          imageAddress: "PLACEHOLDER_ADDRESS",
+          imageAddress: "4949 W Cermak Rd, Cicero, IL",
           altFileName: "place_capone.jpg",
           altDescription:
-              "Cicero also happens to be the place the infamous Al Capone called home. Al Capone was a known mobster who found his fame at the height of the 'Roaring Twenties', participating in everything from gambling and bootlegging all the way to racketeering and straight up murder. Pictured above is his residence during his life in Illinois, which by contrast seems quite calm and cozy, unlike the life he lead outside of it. ",
-          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
+              "Cicero also happens to be a place the infamous Al Capone called home. Al Capone was a known mobster who found his fame at the height of the 'Roaring Twenties', participating in everything from gambling and bootlegging all the way to racketeering and straight up murder. Pictured above is one of his residences during his life in Illinois, which by contrast seems quite calm and cozy, unlike the life he lead outside of it. ",
+          altImageAddress: "1600 S Austin Blvd, Cicero IL",
           swatch: AppColors.secondary);
     case "place_kenwood.png":
       return OptionInfo(
+          //TODO: Fill in Kenwood
           imageTitle: "Kenwood",
           fileName: fileName,
           imageDescription:
               "If any place screams weatlh, it has to be Kenwood. Settled in the 1850s by rich Chicagoans who wanted to escape the crowded city, Kenwood is populated by extravagant residences and neighborhoods tailored perfectly down to the last leaf on a tree. If there's any fair criticism of Kenwood, it's certainly not its beauty.",
-          imageAddress: "PLACEHOLDER_ADDRESS",
+          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: Add Kenwood Address
           altFileName: "place_obama.jpg",
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
-          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
+          altDescription:
+              "Kenwood is also contains the home of the 44th President of the United States: Barack Obama. The Obama Family Home is a fancy red-brick house boasting 6 bedfrooms within its 15k square feet area",
+          altImageAddress: "5046 S. Greenwood Ave, Kenwood, IL",
           swatch: AppColors.secondary);
     case "place_hermosa.png":
       return OptionInfo(
+          //TODO: Fill in Hermosa
           imageTitle: "Hermosa",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
@@ -259,6 +259,7 @@ OptionInfo getInfo(String fileName) {
           swatch: AppColors.secondary);
     case "event_spooky.jpg":
       return OptionInfo(
+          //TODO: Fill in Spooky
           imageTitle: "Halsted Halloween Parade",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
@@ -269,6 +270,7 @@ OptionInfo getInfo(String fileName) {
           swatch: AppColors.tertiary);
     case "event_justice.jpg":
       return OptionInfo(
+          //TODO: Fill in Justice
           imageTitle: "Black Writers on Justice",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
@@ -279,6 +281,7 @@ OptionInfo getInfo(String fileName) {
           swatch: AppColors.tertiary);
     case "event_cruise.jpg":
       return OptionInfo(
+          //TODO: Fill in Cruise
           imageTitle: "Chicago River Cruise",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
@@ -289,6 +292,7 @@ OptionInfo getInfo(String fileName) {
           swatch: AppColors.tertiary);
     case "sport_bulls.png":
       return OptionInfo(
+          //TODO: Fill in Bulls
           imageTitle: "Bulls",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
@@ -299,6 +303,7 @@ OptionInfo getInfo(String fileName) {
           swatch: AppColors.quaternary);
     case "sport_sox.png":
       return OptionInfo(
+          //TODO: Fill in Sox
           imageTitle: "White Sox",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
@@ -309,6 +314,7 @@ OptionInfo getInfo(String fileName) {
           swatch: AppColors.quaternary);
     case "sport_fire.png":
       return OptionInfo(
+          //TODO: Fill in Fire
           imageTitle: "Fire",
           fileName: fileName,
           imageDescription: "PLACEHOLDER_DESCRIPTION",
