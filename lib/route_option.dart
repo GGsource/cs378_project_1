@@ -66,45 +66,50 @@ class _RouteOption extends State<RouteOption> {
           thickness: 10,
           radius: const Radius.circular(100),
           thumbVisibility: true,
-          child: SingleChildScrollView(
-            child: Container(
-              margin: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Wrap(
-                    alignment: WrapAlignment.center,
-                    spacing: 40,
-                    runSpacing: 20,
-                    children: [
-                      // IMAGE
-                      GestureDetector(
-                        child: Hero(
-                          tag: widget.oInfo.imageTitle,
-                          child: Image.asset("images/$_currentFileName"),
+          child: GlowingOverscrollIndicator(
+            //Sets the glow when you scroll too far up or down
+            color: widget.oInfo.swatch,
+            axisDirection: AxisDirection.down,
+            child: SingleChildScrollView(
+              child: Container(
+                margin: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: 40,
+                      runSpacing: 20,
+                      children: [
+                        // IMAGE
+                        GestureDetector(
+                          child: Hero(
+                            tag: widget.oInfo.imageTitle,
+                            child: Image.asset("images/$_currentFileName"),
+                          ),
                         ),
-                      ),
-                      // TITLE
-                      Text(
-                        widget.oInfo.imageTitle,
-                        textAlign: TextAlign.center,
-                        style: getTitleStyle(),
-                      ),
-                      // DESCRIPTION
-                      Text(
-                        _currentDescription,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(fontSize: 20),
-                      ),
-                      Text(
-                        _currentAddress,
-                        textAlign: TextAlign.center,
-                        style:
-                            TextStyle(fontSize: 25, color: widget.oInfo.swatch),
-                      ),
-                    ],
-                  ),
-                ],
+                        // TITLE
+                        Text(
+                          widget.oInfo.imageTitle,
+                          textAlign: TextAlign.center,
+                          style: getTitleStyle(),
+                        ),
+                        // DESCRIPTION
+                        Text(
+                          _currentDescription,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(fontSize: 20),
+                        ),
+                        Text(
+                          _currentAddress,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 25, color: widget.oInfo.swatch),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
