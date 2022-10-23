@@ -243,7 +243,7 @@ OptionInfo getInfo(String fileName) {
           imageAddress: "Kenwood, IL - 60615",
           altFileName: "place_obama.jpg",
           altDescription:
-              "Kenwood is also contains the home of the 44th President of the United States: Barack Obama. The Obama Family Home is a fancy red-brick house boasting 6 bedfrooms within its 15k square feet area",
+              "Kenwood is also contains the home of the 44th President of the United States: Barack Obama. The Obama Family Home is a fancy red-brick house boasting 6 bedrooms within its 15k square feet area and certainly says 'presidential wealth'. Unfortunately for the Obama family though, fame comes with its downsides and so the family home has become an unintentional tourist spot where strangers openly gawk.",
           altImageAddress: "5046 S. Greenwood Ave, Kenwood, IL",
           swatch: AppColors.secondary);
     case "place_hermosa.png":
@@ -262,11 +262,13 @@ OptionInfo getInfo(String fileName) {
       return OptionInfo(
           imageTitle: "Halsted Halloween Parade",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION", //TODO: Spooky Desc
-          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: spooky address
-          altFileName: "event_spooky_alt.png", //TODO: spooky alt img
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION", //TODO: spooky alt desc
-          altImageAddress: "PLACEHOLDER_ALT_ADDRESS", //TODO: spooky alt address
+          imageDescription:
+              "With the upcoming holiday just a week away, no other event could possibly more relevant than the Halsted Halloween Night Parade. On Halloween night the chicago residents don their costumes ranging from the simple and sweet to the eloquent and extravagant. They then make their way down Halsted, displaying their attire for all to see and perhaps get a bit of a fright out of. Its certainly one of the spookiest events available in the city of Chicago.",
+          imageAddress: "3210 N Halsted St, Chicago, IL 60657",
+          altFileName: "event_spooky_alt.png",
+          altDescription:
+              "Spookier than this event however, is this man pictured above. Known to some as Pogo the clown, and to others as Patches the clown, he was not quite as friendly as his attire may imply. Using the guise of a friendly clown, John Wayne Gacy murdered and tortured at least 33 young men from 1967 to 1978, burying their remains in the crawl space beneath his home or disposing of their remains in the Des Plaines River. He was tried in Cook County and later executed in 1994",
+          altImageAddress: "",
           swatch: AppColors.tertiary);
     case "event_justice.jpg":
       return OptionInfo(
@@ -283,10 +285,11 @@ OptionInfo getInfo(String fileName) {
           imageTitle: "Chicago River Cruise",
           fileName: fileName,
           imageDescription:
-              "PLACEHOLDER_DESCRIPTION", //TODO: Cruise Description
-          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: Cruise address
-          altFileName: "event_cruise_alt.png", //TODO: Cruise alt img
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION", //TODO: Cruise alt desc
+              "One of the greatest tourist attractions Chicago has to offer is undoubtedly its great river that cuts through the city, leaving a beautiful river. Atop this river of course has formed a natural boat transportation, which also happens to serve as an excellent way of giving visitors a tour of the nearby area. For this purpose, Chicago has many such River Cruise events that take people from landmark to landmark while they gently coast along on a cruise ship.",
+          imageAddress: "306-370 W Wacker Dr, Chicago, IL 60654",
+          altFileName: "event_cruise_alt.png",
+          altDescription:
+              "In this same location the cruise takes place, there's another famous event that happens once a year: The Chicago St. Patrick's Day Green river dying. For 60 years the city has had a tradition of dying the chicago rive a deep green color in celebration of the Irish holiday. The city uses a 'secret' powder dye that is ironically orange before touching water. This secrecy however has lead to environmental concern groups being worried about what exactly is used in dying the river and what its potential harm to wildlife could be. Originally the mayor planned to dye a portion of Lake Michigan, so at least dying just the river was a more manageable job.",
           altImageAddress: "",
           swatch: AppColors.tertiary);
     case "sport_bulls.png":
