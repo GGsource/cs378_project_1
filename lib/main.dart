@@ -291,20 +291,26 @@ OptionInfo getInfo(String fileName) {
       return OptionInfo(
           imageTitle: "Bulls",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION", //TODO: Bulls Description
-          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: Bulls address
-          altFileName: "sport_bulls_alt.png", //TODO: Bulls alt img
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION", //TODO: Bulls alt desc
+          imageDescription:
+              "The Chicago Bulls are an American professional basketball team based in Chicago. Founded on January 16th of 1966, The bulls are the only NBA team ever to win multiple championships while never losing an NBA Finals series in their history. The bulls are known for their 1991-1998 streak of winning six championships in two groups of 3 at a time.",
+          imageAddress:
+              "United Center Arena - 1901 W Madison St, Chicago, IL 60612",
+          altFileName: "sport_bulls_alt.png",
+          altDescription:
+              "Undoubtedly what the Chicago Bulls are known for the most is being the team that housed Michael Jordan, the legendary hall of fame player who rocketed the team into international fame, and is the face of the Jordans shoe brand. Even to this day Jordan is still considered by many to be the best basketball player the NBA has ever seen.",
           altImageAddress: "",
           swatch: AppColors.quaternary);
     case "sport_sox.png":
       return OptionInfo(
           imageTitle: "White Sox",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION", //TODO: Sox Description
-          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: Sox address
-          altFileName: "sport_sox_alt.png", //TODO: Sox alt img
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION", //TODO: Sox alt desc
+          imageDescription:
+              "The White Sox are a professional American baseball team based in Chicago. They compete in Major League Baseball and are part of the American League Central division",
+          imageAddress:
+              "Guaranteed Rate Field Stadium 333 W 35th St, Chicago, IL 60616",
+          altFileName: "sport_sox_alt.png",
+          altDescription:
+              "Despite what the name 'Chicago Black Sox' may imply, there is in fact not a rival team wearing inverted colors to the white sox. Black sox refers to the 1919 scandal where eight of members of the white sox were accused of throwing the 1919 World Series against the Cincinati Reds, letting them win in exchange for money. This money was alledged to come from gambling syndicate leader Arndold Rothstein. This resulted in these eight players being permanently banned from professional baseball. ",
           altImageAddress: "",
           swatch: AppColors.quaternary);
     case "sport_fire.png":
