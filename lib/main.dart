@@ -274,11 +274,14 @@ OptionInfo getInfo(String fileName) {
       return OptionInfo(
           imageTitle: "Black Writers on Justice",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION", //TODO: Just Description
-          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: Just address
-          altFileName: "event_justice_alt.png", //TODO: Just alt img
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION", //TODO: Just alt desc
-          altImageAddress: "PLACEHOLDER_ALT_ADDRESS", //TODO: Just alt address
+          imageDescription:
+              "Explore racial injustice in America by examining the work of Black American writers from the end of the Civil War through the Civil Rights Movement. Featuring original artwork, augmented reality and other interactive elements to enliven and enrich the experience, Dark Testament brings the work of writers past and present to life in new and exciting ways.",
+          imageAddress:
+              "American Writers Museum 180 N. Michigan Ave. Chicago,IL60601",
+          altFileName: "event_justice_alt.png",
+          altDescription:
+              "Something not many know is that Kanye West, one of the most prominent black artists in the modern day, was raised in Chicago. At the age of nineteen he received his first official production credits by producing eight tracks on Chicago rapper Grav's debut album titled 'Down to Earth'. Recently however his focus seems to have turned to a political one, even attempting to run in the 2020 election, though generally failing due to lack of proper planning and getting involved too late. He still however hints at running for 2024, though conversely is also an avid Trump fan, which leaves things uncertain as to what will happen in the next two years.",
+          altImageAddress: "",
           swatch: AppColors.tertiary);
     case "event_cruise.jpg":
       return OptionInfo(
