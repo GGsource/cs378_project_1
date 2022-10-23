@@ -250,11 +250,13 @@ OptionInfo getInfo(String fileName) {
       return OptionInfo(
           imageTitle: "Hermosa",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION", //TODO: Hermosa Desc
-          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: Hermosa address
-          altFileName: "place_disney.jpg", //TODO: Hermosa alt img
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION", //TODO: Hermosa altdesc
-          altImageAddress: "PLACEHOLDER_ALT_ADDRESS", //TODO: Hermosa altaddress
+          imageDescription:
+              "Located on the Northwest side of Chicago, Hermosa is a small community, but one of Chicago's most densely populated. It's a popular choice due to its proximity to downtown combined with a healthy public transportation system. The region demographics are upwards of 90.5% hispanic.",
+          imageAddress: "Hermosa, IL - 60639",
+          altFileName: "place_disney.jpg",
+          altDescription:
+              "Hermosa was also home to none other than Walt Disney himself. Picture above is his childhood home, which has now become a tourist spot, turning his childhood home into something of a museum. Disney is responsible for founding an international super-corporation that has brought people many memorable movies and cartoons, but he also had a darker history. Plenty of unverifiable rumors regarding his racial prejudices have floated around in the decades since his rise to fame, but one thing that is not rumor and just plain fact is that Walt decided to welcome Nazi director Leni Riefenstahl to his studios a month after Kristallnacht. This kind of stain on one's reputation is not so easily clensed.", //TODO: Hermosa altdesc
+          altImageAddress: "",
           swatch: AppColors.secondary);
     case "event_spooky.jpg":
       return OptionInfo(
