@@ -227,7 +227,7 @@ OptionInfo getInfo(String fileName) {
           fileName: fileName,
           imageDescription:
               "Cicero is a suburb of Chicago and an incorporated town in Cook County, Illinois, United States. Per the 2020 census, the population was 85,268. making it the 11th largest municipality in Illinois. The town of Cicero is named after Marcus Tullius Cicero, a Roman statesman and orator.",
-          imageAddress: "4949 W Cermak Rd, Cicero, IL",
+          imageAddress: "Cicero, IL - 60632",
           altFileName: "place_capone.jpg",
           altDescription:
               "Cicero also happens to be a place the infamous Al Capone called home. Al Capone was a known mobster who found his fame at the height of the 'Roaring Twenties', participating in everything from gambling and bootlegging all the way to racketeering and straight up murder. Pictured above is one of his residences during his life in Illinois, which by contrast seems quite calm and cozy, unlike the life he lead outside of it. ",
@@ -235,12 +235,12 @@ OptionInfo getInfo(String fileName) {
           swatch: AppColors.secondary);
     case "place_kenwood.png":
       return OptionInfo(
-          //TODO: Fill in Kenwood
+          //DONE: Fill in Kenwood
           imageTitle: "Kenwood",
           fileName: fileName,
           imageDescription:
               "If any place screams weatlh, it has to be Kenwood. Settled in the 1850s by rich Chicagoans who wanted to escape the crowded city, Kenwood is populated by extravagant residences and neighborhoods tailored perfectly down to the last leaf on a tree. If there's any fair criticism of Kenwood, it's certainly not its beauty.",
-          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: Add Kenwood Address
+          imageAddress: "Kenwood, IL - 60615",
           altFileName: "place_obama.jpg",
           altDescription:
               "Kenwood is also contains the home of the 44th President of the United States: Barack Obama. The Obama Family Home is a fancy red-brick house boasting 6 bedfrooms within its 15k square feet area",
@@ -248,80 +248,76 @@ OptionInfo getInfo(String fileName) {
           swatch: AppColors.secondary);
     case "place_hermosa.png":
       return OptionInfo(
-          //TODO: Fill in Hermosa
           imageTitle: "Hermosa",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION",
-          imageAddress: "PLACEHOLDER_ADDRESS",
-          altFileName: "place_disney.jpg",
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
-          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
+          imageDescription: "PLACEHOLDER_DESCRIPTION", //TODO: Hermosa Desc
+          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: Hermosa address
+          altFileName: "place_disney.jpg", //TODO: Hermosa alt img
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION", //TODO: Hermosa altdesc
+          altImageAddress: "PLACEHOLDER_ALT_ADDRESS", //TODO: Hermosa altaddress
           swatch: AppColors.secondary);
     case "event_spooky.jpg":
       return OptionInfo(
-          //TODO: Fill in Spooky
           imageTitle: "Halsted Halloween Parade",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION",
-          imageAddress: "PLACEHOLDER_ADDRESS",
-          altFileName: "event_spooky_alt.png",
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
-          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
+          imageDescription: "PLACEHOLDER_DESCRIPTION", //TODO: Spooky Desc
+          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: spooky address
+          altFileName: "event_spooky_alt.png", //TODO: spooky alt img
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION", //TODO: spooky alt desc
+          altImageAddress: "PLACEHOLDER_ALT_ADDRESS", //TODO: spooky alt address
           swatch: AppColors.tertiary);
     case "event_justice.jpg":
       return OptionInfo(
-          //TODO: Fill in Justice
           imageTitle: "Black Writers on Justice",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION",
-          imageAddress: "PLACEHOLDER_ADDRESS",
-          altFileName: "event_justice_alt.png",
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
-          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
+          imageDescription: "PLACEHOLDER_DESCRIPTION", //TODO: Just Description
+          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: Just address
+          altFileName: "event_justice_alt.png", //TODO: Just alt img
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION", //TODO: Just alt desc
+          altImageAddress: "PLACEHOLDER_ALT_ADDRESS", //TODO: Just alt address
           swatch: AppColors.tertiary);
     case "event_cruise.jpg":
       return OptionInfo(
-          //TODO: Fill in Cruise
           imageTitle: "Chicago River Cruise",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION",
-          imageAddress: "PLACEHOLDER_ADDRESS",
-          altFileName: "event_cruise_alt.png",
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
-          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
+          imageDescription:
+              "PLACEHOLDER_DESCRIPTION", //TODO: Cruise Description
+          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: Cruise address
+          altFileName: "event_cruise_alt.png", //TODO: Cruise alt img
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION", //TODO: Cruise alt desc
+          altImageAddress: "",
           swatch: AppColors.tertiary);
     case "sport_bulls.png":
       return OptionInfo(
-          //TODO: Fill in Bulls
           imageTitle: "Bulls",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION",
-          imageAddress: "PLACEHOLDER_ADDRESS",
-          altFileName: "sport_bulls_alt.png",
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
-          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
+          imageDescription: "PLACEHOLDER_DESCRIPTION", //TODO: Bulls Description
+          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: Bulls address
+          altFileName: "sport_bulls_alt.png", //TODO: Bulls alt img
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION", //TODO: Bulls alt desc
+          altImageAddress: "",
           swatch: AppColors.quaternary);
     case "sport_sox.png":
       return OptionInfo(
-          //TODO: Fill in Sox
           imageTitle: "White Sox",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION",
-          imageAddress: "PLACEHOLDER_ADDRESS",
-          altFileName: "sport_sox_alt.png",
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
-          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
+          imageDescription: "PLACEHOLDER_DESCRIPTION", //TODO: Sox Description
+          imageAddress: "PLACEHOLDER_ADDRESS", //TODO: Sox address
+          altFileName: "sport_sox_alt.png", //TODO: Sox alt img
+          altDescription: "PLACEHOLDER_ALT_DESCRIPTION", //TODO: Sox alt desc
+          altImageAddress: "",
           swatch: AppColors.quaternary);
     case "sport_fire.png":
       return OptionInfo(
-          //TODO: Fill in Fire
           imageTitle: "Fire",
           fileName: fileName,
-          imageDescription: "PLACEHOLDER_DESCRIPTION",
-          imageAddress: "PLACEHOLDER_ADDRESS",
+          imageDescription:
+              "Chicago Fire, as the name suggests, is a Chicago based Soccer team, named after the infamous fire of 1871 which killed approximately 300 people and destroyed over 17,000 structures and made over 100,000 chicagoans homeless. The soccer team however, has not made anyone homeless as far as I am aware, and has won the US Open Cup in the years 2000, 2003, and 2006.",
+          imageAddress: "1410 Special Olympics Dr, Chicago, IL 60605",
           altFileName: "sport_fire_alt.png",
-          altDescription: "PLACEHOLDER_ALT_DESCRIPTION",
-          altImageAddress: "PLACEHOLDER_ALT_ADDRESS",
+          altDescription:
+              "The Chicago Fire's home stadium has been something of a delicate topic, and it hasn't always been the Soldier Field Stadium shown above. The team's dissatisfaction stemmed from the fact that the things get a bit cramped at home. That is to say, the soccer team also shares the stadium with the Chicago Bears, the well known Chicago football team. Football being more popular in the US, the Bears tend to hold greater leverage with the stadium owners, which manifests as preferential treatment when it comes to how the stadium is laid out. Eventually the Fire team was fed up and moved to the Toyota Stadium in the suburbs near Chicago, but was similarly unhappy with the unsatisfying placement, plus you can't have chicago in your name if you don't even play there. This culminated in their recent return to Soldier Field, though luckily, it appears the Bears are considering moving, which would leave the Fire team as the new main tenant.",
+          altImageAddress: "",
           swatch: AppColors.quaternary);
     default:
       throw Exception("Image '$fileName' does not exist.");

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+// OptionInfo -
+// This is the object that gets passed from the main screen to the routes for
+// each specific option.
 class OptionInfo {
   String imageTitle;
   String fileName;
@@ -22,6 +25,8 @@ class OptionInfo {
       required this.swatch});
 }
 
+// getTitleStyle -
+//Returns a consistent TextStyle to apply to titles across different locations
 TextStyle getTitleStyle({double fontSize = 45}) {
   return TextStyle(
     color: Colors.white, //Title color
